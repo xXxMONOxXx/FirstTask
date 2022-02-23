@@ -18,22 +18,25 @@ public class CustomArray {
         return array.clone();
     }
 
-    public void setArray(int[] customArray) {
+    public void setArray(int... customArray) {
+
         this.array = customArray;
     }
 
     public boolean isEmpty() {
-        return array == null;
+
+        return array.length == 0;
     }
 
     public int length() {
+
         return array.length;
     }
 
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        for(int element : array){
+        for (int element : array) {
             stringBuilder.append(element + SPACE);
         }
         return stringBuilder.toString();
@@ -41,10 +44,12 @@ public class CustomArray {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
+        if (this == o) {
             return true;
-        if (o == null || getClass() != o.getClass())
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
+        }
         CustomArray that = (CustomArray) o;
         return Arrays.equals(array, that.array);
     }

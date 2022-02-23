@@ -7,8 +7,14 @@
     <groupId>by.mishastoma.customarray</groupId>
     <artifactId>FirstTask</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <dependencies>
+
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.5</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>

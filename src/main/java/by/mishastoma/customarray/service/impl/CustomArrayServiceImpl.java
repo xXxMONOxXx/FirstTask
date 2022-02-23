@@ -1,7 +1,8 @@
-package by.mishastoma.customarray.service;
+package by.mishastoma.customarray.service.impl;
 
 import by.mishastoma.customarray.entity.CustomArray;
 import by.mishastoma.customarray.exception.CustomArrayException;
+import by.mishastoma.customarray.service.CustomArrayService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

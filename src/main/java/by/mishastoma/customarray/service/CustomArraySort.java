@@ -5,9 +5,9 @@ import by.mishastoma.customarray.exception.CustomArrayException;
 
 public interface CustomArraySort {
 
-    public void BubbleSort(CustomArray entity) throws CustomArrayException;
+    public void bubbleSort(CustomArray entity) throws CustomArrayException;
 
-    public void SelectionSort(CustomArray entity) throws CustomArrayException;
+    public void selectionSort(CustomArray entity) throws CustomArrayException;
 
-    public void GnomeSort(CustomArray entity) throws CustomArrayException;
+    public void gnomeSort(CustomArray entity) throws CustomArrayException;
 }

@@ -1,7 +1,8 @@
-package by.mishastoma.customarray.service;
+package by.mishastoma.customarray.service.impl;
 
 import by.mishastoma.customarray.entity.CustomArray;
 import by.mishastoma.customarray.exception.CustomArrayException;
+import by.mishastoma.customarray.service.CustomArraySort;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,7 +11,7 @@ public class CustomArraySortImpl implements CustomArraySort {
     private static final Logger logger = LogManager.getLogger();
 
     @Override
-    public void BubbleSort(CustomArray entity) throws CustomArrayException {
+    public void bubbleSort(CustomArray entity) throws CustomArrayException {
         if (entity.isEmpty()) {
             throw new CustomArrayException("Empty array exception");
         } else {
@@ -31,7 +32,7 @@ public class CustomArraySortImpl implements CustomArraySort {
     }
 
     @Override
-    public void SelectionSort(CustomArray entity) throws CustomArrayException {
+    public void selectionSort(CustomArray entity) throws CustomArrayException {
         if (entity.isEmpty()) {
             throw new CustomArrayException("Empty array exception");
         } else {
@@ -55,12 +56,12 @@ public class CustomArraySortImpl implements CustomArraySort {
     }
 
     @Override
-    public void GnomeSort(CustomArray entity) throws CustomArrayException {
+    public void gnomeSort(CustomArray entity) throws CustomArrayException {
         if (entity.isEmpty()) {
             throw new CustomArrayException("Empty array exception");
         } else {
             int[] array = entity.getArray();
-            int index = 1;
+            int index = 0;
             int arrayLength = array.length;
             while (index < arrayLength) {
                 if (index == 0) {
