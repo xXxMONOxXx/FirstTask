@@ -11,15 +11,15 @@ public class CustomArraySortTest {
 
     private final CustomArraySort sort = new CustomArraySortImpl();
 
-    private final CustomArray baseArray = new CustomArray(new int[]{2, -4, 12, 55, 0, 11});
+    private final CustomArray baseArray = new CustomArray(2, -4, 12, 55, 0, 11);
     private final int[] baseArraySorted = new int[]{-4, 0, 2, 11, 12, 55};
-    private final CustomArray zeroesArray = new CustomArray(new int[]{0, 0, 0, 0, 0, 0, 0});
+    private final CustomArray zeroesArray = new CustomArray(0, 0, 0, 0, 0, 0, 0);
     private final int[] zeroesArraySorted = new int[]{0, 0, 0, 0, 0, 0, 0};
-    private final CustomArray negativesArray = new CustomArray(new int[]{-2, -4, -2, -5, -11, -7, -6});
+    private final CustomArray negativesArray = new CustomArray(-2, -4, -2, -5, -11, -7, -6);
     private final int[] negativesArraySorted = new int[]{-11, -7, -6, -5, -4, -2, -2};
-    private final CustomArray positivesArray = new CustomArray(new int[]{1, 4, 5, 7, 2, 4});
+    private final CustomArray positivesArray = new CustomArray(1, 4, 5, 7, 2, 4);
     private final int[] positivesArraySorted = new int[]{1, 2, 4, 4, 5, 7};
-    private final CustomArray nullArray = new CustomArray(new int[]{});
+    private final CustomArray emptyArray = new CustomArray();
 
     @Test
     public void bubbleSortBaseTest() throws CustomArrayException {
@@ -50,9 +50,8 @@ public class CustomArraySortTest {
     }
 
     @Test(expectedExceptions = CustomArrayException.class)
-    public void bubbleSortNullTest() throws CustomArrayException {
-        CustomArray entity = new CustomArray(nullArray.getArray());
-        sort.bubbleSort(entity);
+    public void bubbleSortEmptyTest() throws CustomArrayException {
+        sort.bubbleSort(emptyArray);
     }
 
     @Test
@@ -84,9 +83,8 @@ public class CustomArraySortTest {
     }
 
     @Test(expectedExceptions = CustomArrayException.class)
-    public void selectionSortNullTest() throws CustomArrayException {
-        CustomArray entity = new CustomArray(nullArray.getArray());
-        sort.selectionSort(entity);
+    public void selectionSortEmptyTest() throws CustomArrayException {
+        sort.selectionSort(emptyArray);
     }
 
     @Test
@@ -118,8 +116,7 @@ public class CustomArraySortTest {
     }
 
     @Test(expectedExceptions = CustomArrayException.class)
-    public void gnomeSortNullTest() throws CustomArrayException {
-        CustomArray entity = new CustomArray(nullArray.getArray());
-        sort.gnomeSort(entity);
+    public void gnomeSortEmptyTest() throws CustomArrayException {
+        sort.gnomeSort(emptyArray);
     }
 }

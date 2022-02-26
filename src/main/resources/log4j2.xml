@@ -5,7 +5,7 @@
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
 
-        <RollingFile name="FileAppender" fileName="FirstTask-${date:yyyyMMdd}.log"
+        <RollingFile name="FileAppender" fileName="./logs/FirstTask-${date:yyyyMMdd}.log"
                      filePattern="FirstTask.%d{dd-MMM}.log.gz">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
             <Policies>

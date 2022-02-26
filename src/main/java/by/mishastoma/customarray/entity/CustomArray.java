@@ -24,7 +24,6 @@ public class CustomArray {
     }
 
     public boolean isEmpty() {
-
         return array.length == 0;
     }
 
@@ -39,6 +38,7 @@ public class CustomArray {
         for (int element : array) {
             stringBuilder.append(element + SPACE);
         }
+
         return stringBuilder.toString();
     }
 
