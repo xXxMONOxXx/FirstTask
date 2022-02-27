@@ -6,6 +6,9 @@ import by.mishastoma.customarray.service.CustomArrayService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.OptionalInt;
+import java.util.stream.IntStream;
+
 
 public class CustomArrayServiceImpl implements CustomArrayService {
 
@@ -17,13 +20,10 @@ public class CustomArrayServiceImpl implements CustomArrayService {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
-            int expectedMax = Integer.MIN_VALUE;
-            int[] array = entity.getArray();
-            for (int element : array) {
-                expectedMax = Integer.max(expectedMax, element);
-            }
+            IntStream stream = IntStream.of(entity.getArray());
+            OptionalInt expectedMax = stream.max();
             logger.info("Maximum element: {}", expectedMax);
-            return expectedMax;
+            return expectedMax.getAsInt();
         }
     }
 
@@ -33,13 +33,10 @@ public class CustomArrayServiceImpl implements CustomArrayService {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
-            int expectedMin = Integer.MAX_VALUE;
-            int[] array = entity.getArray();
-            for (int element : array) {
-                expectedMin = Integer.min(expectedMin, element);
-            }
+            IntStream stream = IntStream.of(entity.getArray());
+            OptionalInt expectedMin = stream.min();
             logger.info("Minimum element: {}", expectedMin);
-            return expectedMin;
+            return expectedMin.getAsInt();
         }
     }
 
@@ -49,11 +46,8 @@ public class CustomArrayServiceImpl implements CustomArrayService {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
-            int sum = 0;
-            int[] array = entity.getArray();
-            for (int element : array) {
-                sum += element;
-            }
+            IntStream stream = IntStream.of(entity.getArray());
+            int sum = stream.sum();
             logger.info("Sum of elements: {}", sum);
             return sum;
         }
@@ -64,6 +58,10 @@ public class CustomArrayServiceImpl implements CustomArrayService {
         double average = calculateSum(entity) * 1.0 / entity.length();
         logger.info("Average: {}", average);
         return average;
+    }
+
+    private boolean isNegative(int n) {
+        return n < 0;
     }
 
     @Override
@@ -90,13 +88,8 @@ public class CustomArrayServiceImpl implements CustomArrayService {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
-            int[] array = entity.getArray();
-            int numberOfNegativeElements = 0;
-            for (int element : array) {
-                if (element < 0) {
-                    numberOfNegativeElements++;
-                }
-            }
+            IntStream stream = IntStream.of(entity.getArray());
+            int numberOfNegativeElements = (int) stream.filter(element -> element < 0).count();
             logger.info("Number of negative elements: {}", numberOfNegativeElements);
             return numberOfNegativeElements;
         }
@@ -108,13 +101,8 @@ public class CustomArrayServiceImpl implements CustomArrayService {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
-            int[] array = entity.getArray();
-            int numberOfPositiveElements = 0;
-            for (int element : array) {
-                if (element > 0) {
-                    numberOfPositiveElements++;
-                }
-            }
+            IntStream stream = IntStream.of(entity.getArray());
+            int numberOfPositiveElements = (int) stream.filter(element -> element > 0).count();
             logger.info("Number of positive elements: {}", numberOfPositiveElements);
             return numberOfPositiveElements;
         }

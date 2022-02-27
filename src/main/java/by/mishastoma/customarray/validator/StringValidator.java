@@ -1,4 +1,7 @@
 package by.mishastoma.customarray.validator;
 
-public class StringValidator {
+public interface StringValidator {
+
+    public boolean isValid(String data);
+
 }

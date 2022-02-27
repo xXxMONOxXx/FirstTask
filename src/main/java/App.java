@@ -1,14 +1,16 @@
-import by.mishastoma.customarray.entity.CustomArray;
-import by.mishastoma.customarray.service.CustomArrayService;
-import by.mishastoma.customarray.service.impl.CustomArrayServiceImpl;
-import by.mishastoma.customarray.service.CustomArraySort;
-import by.mishastoma.customarray.service.impl.CustomArraySortImpl;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import by.mishastoma.customarray.reader.FileReader;
+import by.mishastoma.customarray.reader.impl.FileReaderImpl;
 
 public class App {
 
     public static void main(String[] args) {
-
+        String data;
+        FileReader reader = new FileReaderImpl();
+        try {
+            data = reader.readCustomArrayFromFile("data.txt");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

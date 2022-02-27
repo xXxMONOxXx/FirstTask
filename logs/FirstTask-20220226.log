@@ -333,3 +333,6 @@
 2022-02-26 22:59:37.332 [main] INFO  by.mishastoma.customarray.service.impl.CustomArrayServiceImpl - Minimum element: -11
 2022-02-26 22:59:37.333 [main] INFO  by.mishastoma.customarray.service.impl.CustomArrayServiceImpl - Minimum element: 1
 2022-02-26 22:59:37.334 [main] INFO  by.mishastoma.customarray.service.impl.CustomArrayServiceImpl - Minimum element: 0
+2022-02-26 23:29:53.989 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File not found
+2022-02-26 23:34:12.226 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File not found
+2022-02-26 23:34:35.452 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
