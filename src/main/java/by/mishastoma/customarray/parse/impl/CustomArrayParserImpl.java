@@ -17,18 +17,23 @@ public class CustomArrayParserImpl implements CustomArrayParser {
     private static final String REGEX_SPACE_AND_END_OF_LINE = "\\s+";
 
     public CustomArray parse(String data) throws CustomArrayException {
-        data.replaceAll(REGEX_SPACE_AND_END_OF_LINE,EMPTY_STRING);
-        String[] numbers = data.split(SPLIT_SIGN);
-        try {
-            int[] array = new int[numbers.length];
-            int arrayLength = array.length;
-            for (int i = 0; i < arrayLength; i++) {
-                array[i] = Integer.parseInt(numbers[i]);
+        if (data == null) {
+            logger.error("Cannot parse null string");
+            throw new CustomArrayException("Cannot parse null string");
+        } else {
+            data = data.replaceAll(REGEX_SPACE_AND_END_OF_LINE, EMPTY_STRING);
+            String[] numbers = data.split(SPLIT_SIGN);
+            try {
+                int[] array = new int[numbers.length];
+                int arrayLength = array.length;
+                for (int i = 0; i < arrayLength; i++) {
+                    array[i] = Integer.parseInt(numbers[i]);
+                }
+                return new CustomArray(array);
+            } catch (Exception e) {
+                logger.error("Cannot parse string: {}", data);
+                throw new CustomArrayException("Cannot parse string " + data);
             }
-            return new CustomArray(array);
-        } catch (Exception e) {
-            logger.error("Cannot parse string: {}", data);
-            throw new CustomArrayException("Cannot parse string " + data);
         }
     }
 }

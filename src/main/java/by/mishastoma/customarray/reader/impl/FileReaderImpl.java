@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class FileReaderImpl implements FileReader {
@@ -16,8 +17,9 @@ public class FileReaderImpl implements FileReader {
     private static final Logger logger = LogManager.getLogger();
 
     public String readCustomArrayFromFile(String fileName) throws FileException {
-        File file = new File(DEFAULT_PATH + fileName);
+        File file = new File(Paths.get(fileName) + fileName);
         if(!file.exists()){
+            System.out.println(Paths.get(fileName).toString());
             logger.error("File {} not found", fileName);
             throw new FileException(String.format("File %s not found", fileName));
         }
@@ -40,7 +42,7 @@ public class FileReaderImpl implements FileReader {
                     return data.toString();
                 }
                 catch (Exception e){
-                    logger.fatal("Unknown error.");
+                    logger.fatal("Unknown error with file {}", fileName);
                     e.printStackTrace();
                     throw new FileException(String.format("Unknown error with file %s", fileName));
                 }

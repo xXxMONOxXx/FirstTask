@@ -1,0 +1,6 @@
+2022-02-28 17:30:19.166 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-02-28 17:31:01.510 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-02-28 17:31:11.525 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-02-28 17:58:26.598 [main] ERROR by.mishastoma.customarray.parse.impl.CustomArrayParserImpl - Cannot parse string: 
+2022-02-28 17:59:11.864 [main] ERROR by.mishastoma.customarray.parse.impl.CustomArrayParserImpl - Cannot parse string:  12;      33 
+2022-02-28 17:59:36.323 [main] ERROR by.mishastoma.customarray.parse.impl.CustomArrayParserImpl - Cannot parse string:  12;      33 

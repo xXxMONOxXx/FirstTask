@@ -351,3 +351,4 @@
 2022-02-27 18:38:16.376 [main] INFO  by.mishastoma.customarray.service.impl.CustomArrayServiceImpl - Minimum element: OptionalInt[1]
 2022-02-27 18:38:16.378 [main] INFO  by.mishastoma.customarray.service.impl.CustomArrayServiceImpl - Minimum element: OptionalInt[0]
 2022-02-27 18:51:19.390 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-02-27 23:25:32.095 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
