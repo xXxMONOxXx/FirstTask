@@ -10,7 +10,7 @@ public class CustomArrayParserImpl implements CustomArrayParser {
 
     private static final Logger logger = LogManager.getLogger();
 
-    private static final String SPLIT_SIGN = ";";
+    private static final String SEPARATOR = ";";
 
     private static final String EMPTY_STRING = "";
 
@@ -22,7 +22,7 @@ public class CustomArrayParserImpl implements CustomArrayParser {
             throw new CustomArrayException("Cannot parse null string");
         } else {
             data = data.replaceAll(REGEX_SPACE_AND_END_OF_LINE, EMPTY_STRING);
-            String[] numbers = data.split(SPLIT_SIGN);
+            String[] numbers = data.split(SEPARATOR);
             try {
                 int[] array = new int[numbers.length];
                 int arrayLength = array.length;

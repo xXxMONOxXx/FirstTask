@@ -9,13 +9,19 @@ import by.mishastoma.customarray.validator.impl.StringValidatorImpl;
 public class App {
 
     public static void main(String[] args) {
-        String data = " -12       ;      33 ";
-        CustomArrayParser parser = new CustomArrayParserImpl();
+        FileReader reader = new FileReaderImpl();
         try {
-            CustomArray arr = parser.parse(data);
+            String data=reader.readFromFile("data.txt");
+            System.out.println(data);
         }
         catch (Exception e){
             e.printStackTrace();
         }
     }
+
+    /*
+    array == null || array.getArray()==null
+    assertTrue();
+    assertFalse();
+     */
 }

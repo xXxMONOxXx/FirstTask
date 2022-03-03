@@ -1,17 +1,14 @@
 package by.mishastoma.customarray.validator.impl;
 
 import by.mishastoma.customarray.validator.StringValidator;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.regex.Pattern;
 
 public class StringValidatorImpl implements StringValidator {
 
-    private static final Logger logger = LogManager.getLogger();
+    private static final String REGEX_VALID_INT_ARRAY = "^\\s*(-?)\\d+\\s*(;\\s*(-?)\\d+\\s*)*$";
 
-    private static final String REGEX_VALID_STRING = "(-?)\\d+((\\s?)+;(\\s?)+(-?)\\d+(\\s?)+)+((\\s?)+;(\\s?)+(-?)\\d+)";
-    public boolean isValid(String data){
+    public boolean isValidIntArray(String data){
         if(data==null){
             return false;
         }
@@ -20,7 +17,7 @@ public class StringValidatorImpl implements StringValidator {
                 return true;
             }
             else{
-                return Pattern.matches(REGEX_VALID_STRING, data);
+                return Pattern.matches(REGEX_VALID_INT_ARRAY, data);
             }
         }
     }

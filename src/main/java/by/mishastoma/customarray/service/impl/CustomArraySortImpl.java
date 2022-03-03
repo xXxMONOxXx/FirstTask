@@ -12,7 +12,7 @@ public class CustomArraySortImpl implements CustomArraySort {
 
     @Override
     public void bubbleSort(CustomArray entity) throws CustomArrayException {
-        if (entity.isEmpty()) {
+        if (entity == null || entity.getArray() == null) {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
@@ -34,7 +34,7 @@ public class CustomArraySortImpl implements CustomArraySort {
 
     @Override
     public void selectionSort(CustomArray entity) throws CustomArrayException {
-        if (entity.isEmpty()) {
+        if (entity == null || entity.getArray() == null) {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
@@ -59,7 +59,7 @@ public class CustomArraySortImpl implements CustomArraySort {
 
     @Override
     public void gnomeSort(CustomArray entity) throws CustomArrayException {
-        if (entity.isEmpty()) {
+        if (entity == null || entity.getArray() == null) {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {

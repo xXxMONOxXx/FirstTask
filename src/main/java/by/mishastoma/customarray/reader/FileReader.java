@@ -4,5 +4,5 @@ import by.mishastoma.customarray.exception.FileException;
 
 public interface FileReader {
 
-    public String readCustomArrayFromFile(String fileName) throws FileException;
+    public String readFromFile(String fileName) throws FileException;
 }

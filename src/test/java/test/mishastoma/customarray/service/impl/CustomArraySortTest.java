@@ -1,4 +1,4 @@
-package test.mishastoma.customarray.service;
+package test.mishastoma.customarray.service.impl;
 
 import by.mishastoma.customarray.entity.CustomArray;
 import by.mishastoma.customarray.exception.CustomArrayException;

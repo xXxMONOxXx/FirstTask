@@ -1,6 +1,5 @@
 package by.mishastoma.customarray.reader.impl;
 
-import by.mishastoma.customarray.entity.CustomArray;
 import by.mishastoma.customarray.exception.FileException;
 import by.mishastoma.customarray.reader.FileReader;
 import org.apache.logging.log4j.LogManager;
@@ -13,13 +12,11 @@ import java.util.Scanner;
 public class FileReaderImpl implements FileReader {
 
     private static final char END_OF_LINE = '\n';
-    private static final String DEFAULT_PATH = "src/resources/data/";
     private static final Logger logger = LogManager.getLogger();
 
-    public String readCustomArrayFromFile(String fileName) throws FileException {
-        File file = new File(Paths.get(fileName) + fileName);
+    public String readFromFile(String fileName) throws FileException {
+        File file = new File(Paths.get(fileName).toUri());
         if(!file.exists()){
-            System.out.println(Paths.get(fileName).toString());
             logger.error("File {} not found", fileName);
             throw new FileException(String.format("File %s not found", fileName));
         }
@@ -38,7 +35,7 @@ public class FileReaderImpl implements FileReader {
                         data.append(END_OF_LINE);
                     }
                     reader.close();
-                    logger.info("Text from file {} is {}", fileName, data);
+                    logger.info("Successfully got data from file {}", fileName);
                     return data.toString();
                 }
                 catch (Exception e){

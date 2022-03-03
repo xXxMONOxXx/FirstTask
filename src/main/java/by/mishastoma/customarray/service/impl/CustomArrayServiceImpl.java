@@ -16,7 +16,7 @@ public class CustomArrayServiceImpl implements CustomArrayService {
 
     @Override
     public int findMaxElement(CustomArray entity) throws CustomArrayException {
-        if (entity.isEmpty()) {
+        if (entity == null || entity.getArray() == null) {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
@@ -29,7 +29,7 @@ public class CustomArrayServiceImpl implements CustomArrayService {
 
     @Override
     public int findMinElement(CustomArray entity) throws CustomArrayException {
-        if (entity.isEmpty()) {
+        if (entity == null || entity.getArray() == null) {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
@@ -42,7 +42,7 @@ public class CustomArrayServiceImpl implements CustomArrayService {
 
     @Override
     public int calculateSum(CustomArray entity) throws CustomArrayException {
-        if (entity.isEmpty()) {
+        if (entity == null || entity.getArray() == null) {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
@@ -66,7 +66,7 @@ public class CustomArrayServiceImpl implements CustomArrayService {
 
     @Override
     public void changeNegativeElementsToZero(CustomArray entity) throws CustomArrayException {
-        if (entity.isEmpty()) {
+        if (entity == null || entity.getArray() == null) {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
@@ -84,7 +84,7 @@ public class CustomArrayServiceImpl implements CustomArrayService {
 
     @Override
     public int calculateNumberOfNegativeElements(CustomArray entity) throws CustomArrayException {
-        if (entity.isEmpty()) {
+        if (entity == null || entity.getArray() == null) {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
@@ -97,7 +97,7 @@ public class CustomArrayServiceImpl implements CustomArrayService {
 
     @Override
     public int calculateNumberOfPositiveElements(CustomArray entity) throws CustomArrayException {
-        if (entity.isEmpty()) {
+        if (entity == null || entity.getArray() == null) {
             logger.error("Empty array exception");
             throw new CustomArrayException("Empty array exception");
         } else {
