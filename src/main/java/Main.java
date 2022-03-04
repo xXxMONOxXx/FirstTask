@@ -6,21 +6,16 @@ import by.mishastoma.customarray.reader.impl.FileReaderImpl;
 import by.mishastoma.customarray.validator.StringValidator;
 import by.mishastoma.customarray.validator.impl.StringValidatorImpl;
 
-public class App {
+public class Main {
 
     public static void main(String[] args) {
-        FileReader reader = new FileReaderImpl();
-        try {
-            String data=reader.readFromFile("data.txt");
-            System.out.println(data);
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+        CustomArray arrayIdOne = new CustomArray();
+        CustomArray arrayIdTwo = new CustomArray();
+        System.out.println(arrayIdOne.getId());
+        System.out.println(arrayIdTwo.getId());
     }
 
     /*
-    array == null || array.getArray()==null
     assertTrue();
     assertFalse();
      */

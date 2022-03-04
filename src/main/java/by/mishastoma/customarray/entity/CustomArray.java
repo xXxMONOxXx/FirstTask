@@ -1,21 +1,26 @@
 package by.mishastoma.customarray.entity;
 
 import by.mishastoma.customarray.exception.CustomArrayException;
+import by.mishastoma.customarray.observer.CustomArrayEvent;
+import by.mishastoma.customarray.observer.Observable;
+import by.mishastoma.customarray.observer.Observer;
 import by.mishastoma.customarray.util.CustomId;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
-public class CustomArray {
+public class CustomArray implements Observable {
 
     private final int id;
-
     private int[] array;
+    private ArrayList <Observer> observers = new ArrayList<Observer>();
 
-    private static final char SPACE = ' ';
     public CustomArray(int... customArray) {
 
         this.id = CustomId.generate();
         this.array = customArray;
+        notifyObservers();
 
     }
 
@@ -32,6 +37,7 @@ public class CustomArray {
     public void setArray(int... customArray) {
 
         this.array = customArray;
+        notifyObservers();
     }
 
     public int length() {
@@ -53,33 +59,53 @@ public class CustomArray {
             throw new CustomArrayException(String.format("Index %d is out of range.", index));
         } else {
             array[index] = value;
+            notifyObservers();
         }
+
     }
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int element : array) {
-            stringBuilder.append(element + SPACE);
-        }
-
-        return stringBuilder.toString();
+        return "CustomArray{" +
+                "id=" + id +
+                ", array=" + Arrays.toString(array) +
+                '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        CustomArray that = (CustomArray) o;
-        return Arrays.equals(array, that.array);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CustomArray array1 = (CustomArray) o;
+        return Arrays.equals(array, array1.array);
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(array);
+        int result = Objects.hash(id, observers);
+        result = 31 * result + Arrays.hashCode(array);
+        return result;
+    }
+
+    @Override
+    public void notifyObservers() {
+        CustomArrayEvent event = new CustomArrayEvent(this);
+        for(Observer observer : observers){
+            observer.parameterChanged(event);
+        }
+    }
+
+    @Override
+    public void attach(Observer observer) {
+        if(observer != null && !observers.contains(observer)){
+            observers.add(observer);
+        }
+    }
+
+    @Override
+    public void detach(Observer observer) {
+        if(observer != null){
+            observers.remove(observer);
+        }
     }
 }

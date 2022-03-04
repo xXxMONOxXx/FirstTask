@@ -5,7 +5,7 @@ import by.mishastoma.customarray.entity.CustomArray;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class IDComparatorCustomArray implements CustomComparator {
+public class IdComparatorCustomArray implements CustomComparator {
 
     private static final Logger logger = LogManager.getLogger();
 

@@ -18,6 +18,6 @@ public class CustomId {
     }
 
     public static int generate(){
-        return ++nextIdValue;
+        return nextIdValue++;
     }
 }
