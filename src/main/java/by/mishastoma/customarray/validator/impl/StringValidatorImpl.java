@@ -8,6 +8,7 @@ public class StringValidatorImpl implements StringValidator {
 
     private static final String REGEX_VALID_INT_ARRAY = "^\\s*(-?)\\d+\\s*(;\\s*(-?)\\d+\\s*)*$";
 
+    @Override
     public boolean isValidIntArray(String data){
         if(data==null){
             return false;

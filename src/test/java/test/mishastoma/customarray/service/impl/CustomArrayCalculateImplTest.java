@@ -85,9 +85,6 @@ public class CustomArrayCalculateImplTest {
         service.calculateSum(emptyArray);
     }
 
-
-
-
     @Test
     public void calculateNumberOfNegativeElementsBaseTest() throws CustomArrayException {
         int expected = 1;

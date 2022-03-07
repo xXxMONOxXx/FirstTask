@@ -101,3 +101,80 @@
 2022-03-07 13:34:15.241 [main] INFO  by.mishastoma.customarray.service.impl.CustomArraySortImpl - Selection sort finished. Sorted array is: [-11, -7, -6, -5, -4, -2, -2]
 2022-03-07 13:34:15.243 [main] INFO  by.mishastoma.customarray.service.impl.CustomArraySortImpl - Selection sort finished. Sorted array is: [1, 2, 4, 4, 5, 7]
 2022-03-07 13:34:15.245 [main] INFO  by.mishastoma.customarray.service.impl.CustomArraySortImpl - Selection sort finished. Sorted array is: [0, 0, 0, 0, 0, 0, 0]
+2022-03-07 16:16:20.236 [main] ERROR by.mishastoma.customarray.parser.impl.CustomArrayParserImpl - Cannot parse string: 123;3123x;123
+2022-03-07 16:27:35.344 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File emptyReaderTest.txt not found
+2022-03-07 16:27:35.362 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 16:27:35.367 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File oneLineFile.txt not found
+2022-03-07 16:27:35.371 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File threeLinesReaderTest.txt not found
+2022-03-07 16:28:58.687 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File emptyReaderTest.txt not found
+2022-03-07 16:28:58.697 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 16:28:58.699 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File oneLineFile.txt not found
+2022-03-07 16:28:58.703 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File threeLinesReaderTest.txt not found
+2022-03-07 16:29:55.356 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File emptyReaderTest.txt not found
+2022-03-07 16:29:55.367 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 16:29:55.370 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File oneLineFile.txt not found
+2022-03-07 16:29:55.373 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File threeLinesReaderTest.txt not found
+2022-03-07 16:34:48.824 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File emptyReaderTest.txt not found
+2022-03-07 16:34:48.835 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 16:34:48.837 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File oneLineFile.txt not found
+2022-03-07 16:34:48.840 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File threeLinesReaderTest.txt not found
+2022-03-07 16:36:00.139 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File emptyReaderTest.txt not found
+2022-03-07 16:36:00.149 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 16:36:00.152 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File oneLineFile.txt not found
+2022-03-07 16:36:00.155 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File threeLinesReaderTest.txt not found
+2022-03-07 16:36:06.773 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data not found
+2022-03-07 16:36:22.499 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-03-07 16:41:44.505 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-03-07 16:44:24.882 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-03-07 16:45:53.127 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-03-07 16:46:05.137 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-03-07 16:47:16.995 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-03-07 16:50:14.525 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/main/resources/data.txt not found
+2022-03-07 16:51:28.037 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File data.txt not found
+2022-03-07 16:54:41.048 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file data.txt
+2022-03-07 16:55:37.829 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/resources/data/data.txt not found
+2022-03-07 16:56:01.792 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/resources/data/data.txt not found
+2022-03-07 16:56:16.490 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/resources/data/data.txt not found
+2022-03-07 16:56:36.306 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/resources/data/data.txt not found
+2022-03-07 16:57:05.606 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File java/src/resources/data/data.txt not found
+2022-03-07 16:57:35.903 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/main/resources/data/data.txt
+2022-03-07 16:58:44.601 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/test/resources/emptyReaderTest.txt not found
+2022-03-07 16:58:44.612 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 16:58:44.614 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/test/resources/oneLineFile.txt not found
+2022-03-07 16:58:44.618 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/test/resources/threeLinesReaderTest.txt not found
+2022-03-07 16:59:13.213 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/emptyReaderTest.txt
+2022-03-07 16:59:13.220 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 16:59:13.223 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/test/resources/data/oneLineFile.txt not found
+2022-03-07 16:59:13.233 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/threeLinesReaderTest.txt
+2022-03-07 17:01:13.084 [main] FATAL by.mishastoma.customarray.reader.impl.FileReaderImpl - Unknown error with file src/test/resources/data/emptyReaderTest.txt
+2022-03-07 17:01:13.098 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 17:01:13.101 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/test/resources/data/oneLineFile.txt not found
+2022-03-07 17:01:13.107 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/threeLinesReaderTest.txt
+2022-03-07 17:01:57.954 [main] FATAL by.mishastoma.customarray.reader.impl.FileReaderImpl - Unknown error with file src/test/resources/data/emptyReaderTest.txt
+2022-03-07 17:01:57.965 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 17:01:57.969 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/test/resources/data/oneLineFile.txt not found
+2022-03-07 17:01:57.974 [main] FATAL by.mishastoma.customarray.reader.impl.FileReaderImpl - Unknown error with file src/test/resources/data/threeLinesReaderTest.txt
+2022-03-07 17:02:07.695 [main] FATAL by.mishastoma.customarray.reader.impl.FileReaderImpl - Unknown error with file src/test/resources/data/emptyReaderTest.txt
+2022-03-07 17:02:07.709 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 17:02:07.711 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/test/resources/data/oneLineFile.txt not found
+2022-03-07 17:02:07.718 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/threeLinesReaderTest.txt
+2022-03-07 17:02:18.913 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/emptyReaderTest.txt
+2022-03-07 17:02:18.924 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 17:02:18.927 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/test/resources/data/oneLineFile.txt not found
+2022-03-07 17:02:18.937 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/threeLinesReaderTest.txt
+2022-03-07 17:03:02.756 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/emptyReaderTest.txt
+2022-03-07 17:03:02.766 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 17:03:02.769 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File src/test/resources/data/oneLineReader.txt not found
+2022-03-07 17:03:02.783 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/threeLinesReaderTest.txt
+2022-03-07 17:03:16.364 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/emptyReaderTest.txt
+2022-03-07 17:03:16.381 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 17:03:16.389 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/oneLineReaderTest.txt
+2022-03-07 17:03:16.393 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/threeLinesReaderTest.txt
+2022-03-07 17:03:33.031 [main] FATAL by.mishastoma.customarray.reader.impl.FileReaderImpl - Unknown error with file src/test/resources/data/emptyReaderTest.txt
+2022-03-07 17:03:33.047 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 17:03:33.051 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/oneLineReaderTest.txt
+2022-03-07 17:03:33.058 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/threeLinesReaderTest.txt
+2022-03-07 17:04:01.989 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/emptyReaderTest.txt
+2022-03-07 17:04:01.997 [main] ERROR by.mishastoma.customarray.reader.impl.FileReaderImpl - File nonexistent.txt not found
+2022-03-07 17:04:02.002 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/oneLineReaderTest.txt
+2022-03-07 17:04:02.005 [main] INFO  by.mishastoma.customarray.reader.impl.FileReaderImpl - Successfully got data from file src/test/resources/data/threeLinesReaderTest.txt

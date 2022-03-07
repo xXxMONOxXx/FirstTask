@@ -5,6 +5,7 @@ import by.mishastoma.customarray.entity.CustomArray;
 
 public class CustomArrayCreatorImpl implements CustomArrayCreator {
 
+    @Override
     public CustomArray createCustomArray(int... array) {
 
         return new CustomArray(array);

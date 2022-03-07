@@ -16,7 +16,8 @@ public class CustomArrayParserImpl implements CustomArrayParser {
 
     private static final String REGEX_SPACE_AND_END_OF_LINE = "\\s+";
 
-    public CustomArray parse(String data) throws CustomArrayException {
+    @Override
+    public int[] parse(String data) throws CustomArrayException {
         if (data == null) {
             logger.error("Cannot parse null string");
             throw new CustomArrayException("Cannot parse null string");
@@ -29,7 +30,7 @@ public class CustomArrayParserImpl implements CustomArrayParser {
                 for (int i = 0; i < arrayLength; i++) {
                     array[i] = Integer.parseInt(numbers[i]);
                 }
-                return new CustomArray(array);
+                return array;
             } catch (Exception e) {
                 logger.error("Cannot parse string: {}", data);
                 throw new CustomArrayException("Cannot parse string " + data);
