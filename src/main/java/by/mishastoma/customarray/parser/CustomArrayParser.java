@@ -1,4 +1,4 @@
-package by.mishastoma.customarray.parse;
+package by.mishastoma.customarray.parser;
 
 import by.mishastoma.customarray.entity.CustomArray;
 import by.mishastoma.customarray.exception.CustomArrayException;

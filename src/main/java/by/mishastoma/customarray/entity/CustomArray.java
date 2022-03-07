@@ -54,6 +54,10 @@ public class CustomArray implements Observable {
 
     }
 
+    public boolean isEmpty(){
+        return this.array==null || array.length==0;
+    }
+
     public void setElement(int index, int value) throws CustomArrayException {
         if (index < 0 || index >= array.length) {
             throw new CustomArrayException(String.format("Index %d is out of range.", index));

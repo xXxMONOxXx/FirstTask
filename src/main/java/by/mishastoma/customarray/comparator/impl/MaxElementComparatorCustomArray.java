@@ -3,8 +3,8 @@ package by.mishastoma.customarray.comparator.impl;
 import by.mishastoma.customarray.comparator.CustomComparator;
 import by.mishastoma.customarray.entity.CustomArray;
 import by.mishastoma.customarray.exception.CustomArrayException;
-import by.mishastoma.customarray.service.CustomArrayService;
-import by.mishastoma.customarray.service.impl.CustomArrayServiceImpl;
+import by.mishastoma.customarray.service.CustomArrayFind;
+import by.mishastoma.customarray.service.impl.CustomArrayFindImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,7 +15,7 @@ public class MaxElementComparatorCustomArray implements CustomComparator {
     @Override
     public int compare(CustomArray firstArray, CustomArray secondArray){
         try{
-            CustomArrayService service = new CustomArrayServiceImpl();
+            CustomArrayFind service = new CustomArrayFindImpl();
             int firstArrayMaxElement = service.findMaxElement(firstArray);
             int secondArrayMaxElement = service.findMaxElement(secondArray);
             return Integer.compare(firstArrayMaxElement, secondArrayMaxElement);

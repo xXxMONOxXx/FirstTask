@@ -1,10 +1,6 @@
+package by.mishastoma.customarray.main;
+
 import by.mishastoma.customarray.entity.CustomArray;
-import by.mishastoma.customarray.parse.CustomArrayParser;
-import by.mishastoma.customarray.parse.impl.CustomArrayParserImpl;
-import by.mishastoma.customarray.reader.FileReader;
-import by.mishastoma.customarray.reader.impl.FileReaderImpl;
-import by.mishastoma.customarray.validator.StringValidator;
-import by.mishastoma.customarray.validator.impl.StringValidatorImpl;
 
 public class Main {
 

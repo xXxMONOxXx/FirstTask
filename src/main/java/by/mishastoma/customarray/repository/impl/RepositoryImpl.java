@@ -1,6 +1,7 @@
 package by.mishastoma.customarray.repository.impl;
 
 import by.mishastoma.customarray.entity.CustomArray;
+import by.mishastoma.customarray.repository.Repository;
 import by.mishastoma.customarray.specification.Specification;
 
 import java.util.ArrayList;
@@ -8,19 +9,19 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Repository {
+public class RepositoryImpl implements Repository {
 
-    private static Repository instance;
+    private static RepositoryImpl instance;
 
     private List<CustomArray> storage;
 
-    private Repository() {
+    private RepositoryImpl() {
         storage = new ArrayList<>();
     }
 
-    public static Repository getInstance() {
+    public static RepositoryImpl getInstance() {
         if (instance == null) {
-            instance = new Repository();
+            instance = new RepositoryImpl();
         }
         return instance;
     }
